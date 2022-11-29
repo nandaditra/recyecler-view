@@ -1,5 +1,6 @@
 package com.example.sistemlogin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -60,6 +61,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
              if(!isEmptyFields) {
                  statusLogin.text = "Success"
              }
+            val moveAbout = Intent(this@MainActivity, MainPageActivity::class.java)
+            startActivity(moveAbout)
         }
     }
 }
