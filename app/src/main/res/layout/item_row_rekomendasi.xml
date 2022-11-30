@@ -32,7 +32,7 @@
             tools:text="Nama Masakan"/>
 
         <TextView
-            android:id="@+id/tv_item_lokasi"
+            android:id="@+id/tv_item_harga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
