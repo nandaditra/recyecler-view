@@ -21,11 +21,11 @@ class ListMasakanAdapter(private val listMasakan: ArrayList<Masakan>): RecyclerV
         var tvNama: TextView = itemView.findViewById(R.id.tv_nama_masakan)
         var tvDesk : TextView = itemView.findViewById(R.id.tv_item_deskripsi)
         var imgPhoto : ImageView = itemView.findViewById(R.id.tv_img_photo_masakan)
-        var tvHarga : TextView = itemView.findViewById(R.id.tv_item_harga)
+        //var tvHarga : TextView = itemView.findViewById(R.id.tv_item_harga)
     }
 
     interface OnItemClickCallback {
-        fun onItemClicked(data : Mitra)
+        fun onItemClicked(data: Masakan)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -43,9 +43,9 @@ class ListMasakanAdapter(private val listMasakan: ArrayList<Masakan>): RecyclerV
 
         holder.tvNama.text = masakan.nama
         holder.tvDesk.text = masakan.deskripsi
-        holder.tvHarga.text = masakan.harga
+        //holder.tvHarga.text = masakan.harga
 
-
+        holder.itemView.setOnClickListener{ onItemClickCallback.onItemClicked(listMasakan[holder.adapterPosition])}
     }
 
     override fun getItemCount(): Int {

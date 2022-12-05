@@ -41,7 +41,7 @@ class MainPageActivity : AppCompatActivity() {
 
         moveKatering.putExtra(KateringActivity.EXTRA_NAME, data.name)
         moveKatering.putExtra(KateringActivity.EXTRA_PHOTO, data.photo)
-        moveKatering.putExtra(KateringActivity.EXTRA_DESKRIPSI, data.description)
+        moveKatering.putExtra(KateringActivity.EXTRA_LOKASI, data.description)
         startActivity(moveKatering)
     }
 

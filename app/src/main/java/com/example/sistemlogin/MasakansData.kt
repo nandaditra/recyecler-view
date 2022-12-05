@@ -25,7 +25,7 @@ object MasakansData {
         get() {
             val listMasakan = arrayListOf<Masakan>()
 
-            for(position in MasakansData.namaMasakan.indices) {
+            for(position in namaMasakan.indices) {
                 val masakan = Masakan()
                 masakan.nama = namaMasakan[position]
                 masakan.harga = hargaMasakan[position]
